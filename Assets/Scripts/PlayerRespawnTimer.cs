@@ -18,7 +18,7 @@ public class PlayerRespawnTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startRespawn)
+        /*if (startRespawn)
         {
             elapsedTime = respawnTime - Time.deltaTime;
             print(elapsedTime);
@@ -27,7 +27,7 @@ public class PlayerRespawnTimer : MonoBehaviour
             {
                 player.RespawnPlayer();
             }
-        }
+        }*/
         
     }
 }

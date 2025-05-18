@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54139580807346500}
   - component: {fileID: 4628609960099292947}
-  - component: {fileID: 4175614021128296951}
+  - component: {fileID: 107541077280767535}
   - component: {fileID: 1288840953527892500}
   m_Layer: 0
   m_Name: Collectible
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5247606, g: 0.81886786, b: 0.13441789, a: 1}
+  m_Sprite: {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -89,8 +89,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4175614021128296951
-BoxCollider2D:
+--- !u!58 &107541077280767535
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,17 +124,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &1288840953527892500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +137,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf3ff4163d6e9438e0ce625f447cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fruitSprites:
+  - {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1987916976, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1251093787, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 828239227, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -462256797, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1366144071, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1218446674, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1914382107, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 519684443, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 986310495, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1337796959, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1595615294, guid: a03c2610221b14940b818fb271b448fa, type: 3}

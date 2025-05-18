@@ -1,16 +1,23 @@
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 20f;
 
     private Rigidbody2D rb;
-    private Vector3 velocity;
+
+    private AudioManager audioManager;
+    private AudioSource source;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        audioManager = GetComponent<AudioManager>();
+        source = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -41,10 +48,18 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 newSize = transform.localScale + new Vector3(0.2f, 0.2f, 0);
 
-        print(newSize);
-
         transform.localScale = newSize;
 
+        //increases the player's mass every time they eat, making them slower
         rb.mass += 0.2f;
+
+        //zooms the camera out everytime the player grows, so the player doesn't take up the whole screen
+        //and we can still see where we're going and avoid obstacles.
+        Camera.main.orthographicSize += 0.2f;
+
+        //plays a munching sound everytime the player grows from collecting a collectible
+        AudioClip clip = audioManager.SelectClip("Eat");
+
+        source.PlayOneShot(clip);
     }
 }

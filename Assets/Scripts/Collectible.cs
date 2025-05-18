@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //an array of sprites to provide an assortment of items to collect
+    public Sprite[] fruitSprites;
 
-    // Update is called once per frame
-    void Update()
+    private SpriteRenderer spriteRenderer;
+
+    void Awake()
     {
-        
+        //we can get a reference to the sprite renderer component on the collectible and randomise the
+        //sprite that it is spawned with, to give the game a bit of variety.
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        Sprite selectedSprite = fruitSprites[Random.Range(0, fruitSprites.Length)];
+
+        spriteRenderer.sprite = selectedSprite;
     }
 
     //for collectibles we use a trigger so the player can move over them. We need references to the
